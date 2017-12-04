@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 def get_token(client_id, client_secret, username, password):
     get_token_files = {
         'grant_type': (None, 'password'),

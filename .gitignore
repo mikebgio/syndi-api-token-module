@@ -102,6 +102,7 @@ ENV/
 
 # Private files
 config.py
+*.csv
 
 # Unrelated scripts
 syndi-tool.py
