@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Private files
+config.py
+
+# Unrelated scripts
+syndi-tool.py
