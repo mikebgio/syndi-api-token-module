@@ -1,7 +1,8 @@
 import requests
 import json
+import config #must create a config.py file in the same directory, See sample
 
-def get_token(client_id, client_secret, username, password):
+def get_token(client_id=config.CLIENT_ID, client_secret=config.CLIENT_SECRET, username=config.USERNAME, password=config.PASSWORD):
     get_token_files = {
         'grant_type': (None, 'password'),
         'client_id': (None, client_id),
@@ -19,7 +20,7 @@ def get_token(client_id, client_secret, username, password):
     return(ACCESS_TOKEN, REFRESH_TOKEN)
 
 
-def refresh(client_id, client_secret, refresh_token):
+def refresh(refresh_token, client_id=config.CLIENT_ID, client_secret=config.CLIENT_SECRET):
     refresh_token_files = {
         'grant_type': (None, 'refresh_token'),
         'client_id': (None, client_id),
